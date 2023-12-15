@@ -1,0 +1,41 @@
+<?php
+
+namespace app\models\service;
+
+use app\models\validacao\ContratogeralValidacao;
+use app\models\dao\ContratogeralDao;
+
+class ContratogeralService
+{
+    // LISTA AS TABELAS (CONTRATO, FORNECEDOR, PROJETO E CONTRATOVIGENCIA)
+    public static function contratogeral()
+    {
+        $dao = new ContratogeralDao();
+        return $dao->contratogeral();
+    }
+
+    // LISTA AS TABELAS (CONTRATO, FORNECEDOR, PROJETO E CONTRATOVIGENCIA)
+    public static function getcontratogeral($id)
+    {
+        $dao = new ContratogeralDao();
+        return $dao->getcontratogeral($id);
+    }
+
+    public static function getdadosbancarios($id)
+    {
+        $dao = new ContratogeralDao();
+        return $dao->getdadosbancarios($id);
+    }
+
+    public static function getcontato($id)
+    {
+        $dao = new ContratogeralDao();
+        return $dao->getcontato($id);
+    }
+
+    public static function getobjeto($id)
+    {
+        $dao = new ContratogeralDao();
+        return $dao->getobjeto($id);
+    }
+}
