@@ -35,21 +35,21 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Telefone<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                            <input type="text" data-inputmask="'mask' : '(99) 9 9999-9999'" maxlength="16" name="telefone" id="first-name" required="required" value="<?php echo ($fornecedorcontato->telefone) ? $fornecedorcontato->telefone : NULL; ?>" class="form-control">
+                            <input type="text" data-inputmask="'mask' : '(99) 9 9999-9999'" maxlength="16" name="telefone" id="first-name" required="required" value="<?php echo isset($fornecedorcontato->telefone) ? $fornecedorcontato->telefone : NULL; ?>" class="form-control">
                         </div>
                     </div>
                     <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Email<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                            <input type="email" name="email" id="first-name" required="required" value="<?php echo ($fornecedorcontato->email) ? $fornecedorcontato->email : NULL; ?>" class="form-control" placeholder="">
+                            <input type="email" name="email" id="first-name" required="required" value="<?php echo isset($fornecedorcontato->email) ? $fornecedorcontato->email : NULL; ?>" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Responsável<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                            <input type="text" name="responsavel" id="first-name" required="required" value="<?php echo ($fornecedorcontato->responsavel) ? $fornecedorcontato->responsavel : NULL; ?>" class="form-control" placeholder="">
+                            <input type="text" name="responsavel" id="first-name" required="required" value="<?php echo isset($fornecedorcontato->responsavel) ? $fornecedorcontato->responsavel : NULL; ?>" class="form-control" placeholder="">
                         </div>
                     </div>
                     <div class="item form-group">

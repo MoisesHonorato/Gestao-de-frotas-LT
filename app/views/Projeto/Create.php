@@ -35,14 +35,14 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Projeto/Obra<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                            <input type="text" name="projeto" id="first-name" required="required" value="<?php echo ($projeto->projeto) ? $projeto->projeto : NULL; ?>" class="form-control" placeholder="Nome do projeto/obra">
+                            <input type="text" name="projeto" id="first-name" required="required" value="<?php echo isset($projeto->projeto) ? $projeto->projeto : NULL; ?>" class="form-control" placeholder="Nome do projeto/obra">
                         </div>
                     </div>
                     <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Empreendimento<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                            <input type="text" name="empreendimento" id="first-name" required="required" value="<?php echo ($projeto->empreendimento) ? $projeto->empreendimento : NULL; ?>" class="form-control" placeholder="Nome do empreendimento">
+                            <input type="text" name="empreendimento" id="first-name" required="required" value="<?php echo isset($projeto->empreendimento) ? $projeto->empreendimento : NULL; ?>" class="form-control" placeholder="Nome do empreendimento">
                         </div>
                     </div>
                     <div class="ln_solid"></div>

@@ -35,7 +35,7 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Nome<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                            <input type="text" name="nome" id="first-name" required="required" value="<?php echo ($colaborador->nome) ? $colaborador->nome : NULL; ?>" class="form-control">
+                            <input type="text" name="nome" id="first-name" required="required" value="<?php echo isset($colaborador->nome) ? $colaborador->nome : NULL; ?>" class="form-control">
                         </div>
                     </div>
                     <div class="item form-group">
@@ -43,8 +43,8 @@
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                             <select name="id_funcao" class="select1_single form-control" tabindex="-1">
-                                <?php foreach ($funcao as $funcao) { ?>
-                                    <option value="<?php echo $funcao->id_funcao; ?>" <?php echo $funcao->id_funcao == $colaborador->id_funcao ? 'Selected' : NULL ?>><?php echo $funcao->funcao; ?></option>
+                                <?php foreach ($funcao as $f) { ?>
+                                    <option value="<?php echo $f->id_funcao; ?>" <?php echo $f->id_funcao == @$colaborador->id_funcao ? 'Selected' : NULL ?>><?php echo $f->funcao; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -55,7 +55,7 @@
                         <div class="col-md-6 col-sm-6 ">
                             <select name="id_projeto" class="select1_single form-control" tabindex="-1">
                                 <?php foreach ($projeto as $projeto) { ?>
-                                    <option value="<?php echo $projeto->id_projeto; ?>" <?php echo $projeto->id_projeto == $colaborador->id_projeto ? 'Selected' : '' ?>><?php echo $projeto->projeto; ?></option>
+                                    <option value="<?php echo $projeto->id_projeto; ?>" <?php echo $projeto->id_projeto == @$colaborador->id_projeto ? 'Selected' : '' ?>><?php echo $projeto->projeto; ?></option>
                                 <?php } ?>
                             </select>
                         </div>

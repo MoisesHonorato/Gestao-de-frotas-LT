@@ -47,15 +47,15 @@
                         </div>
                         <div class="mb-3 col-md-2">
                             <label for="exampleFormControlInput1" class="form-label">Data do contrato</label>
-                            <input type="date" name="datacontrato" require class="form-control" value="<?php echo ($contrato->datacontrato) ? ($contrato->datacontrato) : NULL; ?>">
+                            <input type="date" name="datacontrato" require class="form-control" value="<?php echo isset($contrato->datacontrato) ? ($contrato->datacontrato) : NULL; ?>">
                         </div>
                         <div class="mb-3 col-md-2">
                             <label for="exampleFormControlInput1" class="form-label">Mobilização (R$) *</label>
-                            <input type="text" id="moeda" onkeyup="formatMoeda();" maxlength="10" name="valormobilizacao" require class="form-control" value="<?php echo ($contrato->valormobilizacao) ? $contrato->valormobilizacao : NULL; ?>">
+                            <input type="text" id="moeda" onkeyup="formatMoeda();" maxlength="10" name="valormobilizacao" require class="form-control" value="<?php echo isset($contrato->valormobilizacao) ? $contrato->valormobilizacao : NULL; ?>">
                         </div>
                         <div class="mb-3 col-md-2">
                             <label for="exampleFormControlInput1" require class="form-label">Desmobilização (R$) *</label>
-                            <input type="text" id="moeda2" onkeyup="formatMoeda();" maxlength="10" name="valordesmobilizacao" class="form-control" id="exampleFormControlInput1" value="<?php echo ($contrato->valordesmobilizacao) ? $contrato->valordesmobilizacao : NULL; ?>">
+                            <input type="text" id="moeda2" onkeyup="formatMoeda();" maxlength="10" name="valordesmobilizacao" class="form-control" id="exampleFormControlInput1" value="<?php echo isset($contrato->valordesmobilizacao) ? $contrato->valordesmobilizacao : NULL; ?>">
                         </div>
                         <div class="mb-3 col-md-3">
                             <label for="exampleFormControlInput1" class="form-label">Mão de Obras *</label>

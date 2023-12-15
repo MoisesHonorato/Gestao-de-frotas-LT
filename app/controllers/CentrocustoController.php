@@ -36,8 +36,9 @@ class CentrocustoController extends Controller
    // MÉTODO RESPONSÁVEL POR MOSTRAR A PÁGINA CREATE DA PASTA PROJETO
    public function create()
    {
-      // $dados["centrocusto"]   = Flash::getForm();
-      $dados['projeto']    = CentrocustoService::projetoativo(); // Lista todos projetos
+      $dados["centrocusto"]   = Flash::getForm();
+      $dados['projetos']      = CentrocustoService::projetoativo(); // Lista todos projetos
+
       $dados["view"]       = "Centrocusto/Create";
       $dados['page']    = 'Centro de Custo';
       $this->load("template", $dados);

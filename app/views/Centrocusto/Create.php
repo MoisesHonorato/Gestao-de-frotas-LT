@@ -35,14 +35,14 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Centro de Custo<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                            <input type="text" name="centrocusto" id="first-name" required="required" value="<?php echo ($centrocusto->centrocusto) ? $centrocusto->centrocusto : NULL; ?>" class="form-control" placeholder="99045934">
+                            <input type="text" name="centrocusto" id="first-name" required="required" value="<?php echo isset($centrocusto->centrocusto) ? $centrocusto->centrocusto : NULL; ?>" class="form-control" placeholder="99045934">
                         </div>
                     </div>
                     <div class="item form-group">
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Descrição<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                            <input type="text" name="descricao" id="first-name" required="required" value="<?php echo ($centrocusto->descricao) ? $centrocusto->descricao : NULL; ?>" class="form-control" placeholder="ACESSO">
+                            <input type="text" name="descricao" id="first-name" required="required" value="<?php echo isset($centrocusto->descricao) ? $centrocusto->descricao : NULL; ?>" class="form-control" placeholder="ACESSO">
                         </div>
                     </div>
                     <div class="item form-group">
@@ -50,9 +50,9 @@
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                             <select name="id_projeto" class="select1_single form-control" tabindex="-1">
-                                <?php foreach ($projeto as $projeto) {
+                                <?php foreach ($projetos as $projeto) {
                                 ?>
-                                    <option value="<?php echo $projeto->id_projeto; ?>" <?php echo $projeto->id_projeto == $centrocusto->id_projeto ? 'Selected' : '' ?>>
+                                    <option value="<?php echo $projeto->id_projeto; ?>" <?php echo ($projeto->id_projeto) == @$centrocusto->id_projeto ? 'Selected' : '' ?>>
                                         <?php echo $projeto->projeto; ?>
                                     </option>
                                 <?php } ?>

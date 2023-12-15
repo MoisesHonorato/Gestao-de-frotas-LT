@@ -35,7 +35,7 @@
                         <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Atividade<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 ">
-                            <input type="text" name="atividade" id="first-name" required="required" value="<?php echo ($ccatividade->atividade) ? $ccatividade->atividade : NULL; ?>" class="form-control" placeholder="SESMT">
+                            <input type="text" name="atividade" id="first-name" required="required" value="<?php echo isset($ccatividade->atividade) ? $ccatividade->atividade : NULL; ?>" class="form-control" placeholder="SESMT">
                         </div>
                     </div>
                     <div class="item form-group">
@@ -43,10 +43,10 @@
                         </label>
                         <div class="col-md-6 col-sm-6 ">
                             <select name="id_centrocusto" autocomplete class="select1_single form-control" tabindex="-1">
-                                <?php foreach ($ccprojeto as $ccprojeto) { ?>
-                                    <option value="<?php echo $ccprojeto->id_centrocusto; ?>" <?php echo $ccprojeto->id_centrocusto == $ccatividade->id_centrocusto ? 'Selected' : '' ?>>
+                                <?php foreach ($ccprojeto as $projeto) { ?>
+                                    <option value="<?php echo $projeto->id_centrocusto; ?>" <?php echo $projeto->id_centrocusto == @$ccatividade->id_centrocusto ? 'Selected' : '' ?>>
                                         <?php
-                                        echo $ccprojeto->centrocusto . ' - (' . substr($ccprojeto->projeto, 0, 18) . ') - ' . $ccprojeto->descricao;
+                                        echo $projeto->centrocusto . ' - (' . substr($projeto->projeto, 0, 18) . ') - ' . $projeto->descricao;
                                         ?>
                                     </option>
                                 <?php } ?>
